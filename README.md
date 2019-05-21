@@ -27,11 +27,10 @@ already pass at the beginning still pass when you're done!
    * Artist sort order. This will be used to control the default sort order on the `/artists` page.
    * Allowing creation of new songs. Used to control the ability to add new songs to the system.
    * Allowing creation of new artists. Used to control the ability to add new artists to the system.
-2. Create a `PreferencesController`, routes, and views to manage the preferences. Do this under an `Admin` module to separate it from the standard user functionality.
-3. Update the artists and songs `index` pages to order by `name` according to each preference.
-4. Update the `songs#new` and `artists#new` actions to check that creating new songs or artists is enabled, and redirect to `/songs` and `/artists`, respectively, if that preference is disabled.
-5. Make sure tests pass.
-6. Ride the bull. Feel the flow.
+2. Create a `PreferencesController`, routes, and views to manage the preferences. Do this under an `Admin` module to separate it from the standard user functionality. The artists and songs `index` pages should order by `name` according to each preference.
+3. Update the `songs#new` and `artists#new` actions to check that creating new songs or artists is enabled, and redirect to `/songs` and `/artists`, respectively, if that preference is disabled.
+4. Make sure tests pass.
+5. Ride the bull. Feel the flow.
 
 ![Happy Gilmore](http://i.giphy.com/h2Q9ZYee54UOk.gif)
 
