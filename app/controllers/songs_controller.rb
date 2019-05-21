@@ -5,15 +5,14 @@ class SongsController < ApplicationController
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
-        flash[:alert] = "Artist not found"
-        redirect_to artists_path
+        redirect_to artists_path, alert: "Artist not found"
       elsif @preferences && @preferences.song_sort_order
         @songs = @artist.songs.order(title: @preferences.song_sort_order)
       else
         @songs = @artist.songs
       end
     elsif @preferences && @preferences.song_sort_order
-      @songs = @artist.songs.order(title: @preferences.song_sort_order)
+      @songs = Song.order(title: @preferences.song_sort_order)
     else
       @songs = Song.all
     end
@@ -24,8 +23,7 @@ class SongsController < ApplicationController
       @artist = Artist.find_by(id: params[:artist_id])
       @song = @artist.songs.find_by(id: params[:id])
       if @song.nil?
-        flash[:alert] = "Song not found"
-        redirect_to artist_songs_path(@artist)
+        redirect_to artist_songs_path(@artist), alert: "Song not found"
       end
     else
       @song = Song.find(params[:id])
@@ -80,7 +78,6 @@ class SongsController < ApplicationController
   end
 
   def set_preferences
-    @preferences = Preference.first 
+    @preferences = Preference.first
   end
-
 end

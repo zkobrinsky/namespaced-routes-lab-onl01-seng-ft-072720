@@ -1,4 +1,4 @@
-class CreatePreferences < ActiveRecord::Migration[4.2]
+class CreatePreferences < ActiveRecord::Migration
   def change
     create_table :preferences do |t|
       t.string :artist_sort_order
