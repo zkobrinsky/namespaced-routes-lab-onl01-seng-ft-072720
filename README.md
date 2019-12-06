@@ -25,7 +25,7 @@ already pass at the beginning still pass when you're done!
    to have fields for:
    * Allowing creation of new songs. Used to control the ability to add new songs to the system.
    * Allowing creation of new artists. Used to control the ability to add new artists to the system.
-   **Note:** There will only be 1 instance of `Preference`, not a preference associated with each artist/song.
+   **Note:** There will only be 1 instance of `Preference`, not a preference associated with each artist/song. After creating the model, run `rake preferences:load` so that your code will work in the browser.
 2. Create a `PreferencesController`, routes, and views. Do this under an `Admin` module to separate it from the standard user functionality.
 3. Update the `songs#new` and `artists#new` actions to check that creating new songs or artists is enabled, and redirect to `/songs` and `/artists`, respectively, if that preference is disabled.
 4. Make sure tests pass.
