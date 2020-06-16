@@ -31,6 +31,3 @@ already pass at the beginning still pass when you're done!
 4. Make sure tests pass.
 
 ![Happy Gilmore](http://i.giphy.com/h2Q9ZYee54UOk.gif)
-
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/namespaced-routes-lab' title='Namespaced Routes Lab'>Namespaced Routes Lab</a> on Learn.co and start learning to code for free.</p>
