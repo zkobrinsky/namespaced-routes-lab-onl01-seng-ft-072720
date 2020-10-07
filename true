@@ -1,0 +1,2 @@
+      invoke  active_record
+      remove    db/migrate/20201007145033_create_preferences.rb
